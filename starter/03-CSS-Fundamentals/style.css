@@ -1,0 +1,195 @@
+:root {
+  --text-font-family: sans-serif;
+}
+
+/* Universal selector, for all elements, low priority */
+* {
+  /* border-top: 10px solid #1098ad; */
+}
+
+body {
+  color: #444;
+  font-family: var(--text-font-family);
+  border-top: 10px solid #1098ad;
+}
+
+/* List of selectors */
+
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: var(--text-font-family);
+  color: #444;
+} */
+
+h1,
+h2,
+h3 {
+  color: #0836ab;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+li {
+  font-size: 20px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+body {
+  /* background-color: #fef2e7; */
+}
+/* ul {
+  list-style: none;
+} */
+
+/* Descendant selector */
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+/* ID. It can just be added once in a html item*/
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+/* Class. To reuse */
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+/* SUDO Class: Perfect when all the child elements are the same!*/
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(odd) {
+  color: red;
+}
+
+/* This won't work, as its looking for the first child of the article and expects to be p. But the first child of article is not p element. */
+/* article p:first-child {
+  color: red;
+} */
+
+/* article p:last-child {
+  color: red;
+} */
+
+/* Styling links */
+
+/* Not good practice. Just target a elements (a elements can not have a name). */
+/* a {
+  color: #1098ad;
+}
+ */
+
+/* Always define in this order LVHA (LinkVisitedHoverActive) */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* Conflictive selectors, when styles apply in the same element. 
+Priority by selectors and if there are multimple selectors of the same type, the last in code applies.
+1. Declarations marked !important
+2. Inline style (in HTML)
+3. ID selectors (#)
+4. Class (.) or pseudo-class (:)
+5. Element selector (p, div, lid, ...)
+6. Universal selector (*)
+*/
+
+/* Resolving conflicts */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green !important;
+} */
+
+nav {
+  font-size: 18px;
+}
