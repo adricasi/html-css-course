@@ -10,6 +10,7 @@
   padding: 0;
 }
 
+/* PAGE SECTIONS */
 body {
   color: #444;
   font-family: var(--text-font-family);
@@ -23,6 +24,7 @@ body {
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
+  position: relative;
 }
 
 .main-header {
@@ -69,6 +71,7 @@ li {
   color: #444;
 } */
 
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -119,9 +122,9 @@ li:last-child {
   margin-bottom: 0;
 }
 
-body {
-  /* background-color: #fef2e7; */
-}
+/* body {
+  background-color: #fef2e7;
+} */
 /* ul {
   list-style: none;
 } */
@@ -216,6 +219,63 @@ a:active {
   width: 100%;
   height: auto;
 }
+
+nav a:link {
+  /* No vertical space created for inline elements 
+  margin: 20px;
+  padding: 20px;
+  Change to block element
+  display: block; */
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+/* Absolute position elementes */
+button {
+  font-size: 22px;
+  padding: 20px;
+  /* Change cursor property */
+  cursor: pointer;
+
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* h3 + p::first-line {
+  color: red;
+} */
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  /* Absolute position. It requires parent to have a relative position.*/
+  position: absolute;
+  top: -15px;
+  right: -25px;
+}
+
 /* Conflictive selectors, when styles apply in the same element. 
 Priority by selectors and if there are multimple selectors of the same type, the last in code applies.
 1. Declarations marked !important
@@ -242,3 +302,25 @@ Priority by selectors and if there are multimple selectors of the same type, the
 footer p {
   color: green !important;
 } */
+
+/* Block level boxes
+- formatted visually as blocks
+- 100% of parent's width
+- Vertically, one after another
+- Box-model applies as showed
+ */
+
+/* Inline boxes
+ - Occupies only content's space
+ - Causes no line-breaks
+ - Box model in different: heights and widths do not apply
+ - Paddings on margins only horizontal
+ - a, img, strong, em, button...
+ */
+
+/* Inline-block boxes
+ - Looks like inline from the outside, behaves like block-level on the inside
+ - Occupies only content's space
+ - Causes no line-breaks
+ - Box-model applies as showed
+ */
